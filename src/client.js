@@ -42,6 +42,14 @@ module.exports = function(fetch) {
         }
     };
 
+    Toogles.prototype.has = function(feature) {
+        return this.includes(feature);
+    };
+
+    Toogles.prototype.feature = function(feature) {
+        return this.includes(feature);
+    };
+
     Toogles.prototype.fetch = function() {
         return fetch(this.apiUrl, {
             headers: this.headers

@@ -28,5 +28,9 @@ test('Can check feature flag', async t => {
     t.throws(toogles.includes({}));
     t.throws(toogles.includes());
 
+    // Aliases
+    t.true(await toogles.has('test1'), 'Alias has: Has feature flag test1');
+    t.true(await toogles.feature('test1'), 'Alias feature: Has feature flag test1');
+
     t.deepEqual(toogles.features, features);
 });
