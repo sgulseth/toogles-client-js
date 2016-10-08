@@ -1,0 +1,29 @@
+{
+  "name": "toogles-client",
+  "version": "0.0.0",
+  "description": "NodeJS/Browser client for fetching feature flags from the toogles api",
+  "browser": "src/browser.js",
+  "main": "src/node.js",
+  "scripts": {
+    "build-browser-dist": "browserify src/browser.js | uglifyjs --stats > dist/toogles-browser.js",
+    "test": "nyc ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sgulseth/toogles-client-js.git"
+  },
+  "author": "Sindre Gulseth <sgulseth@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1",
+    "object-assign": "^4.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "browserify": "^13.1.0",
+    "fetch-mock": "^5.5.0",
+    "nyc": "^8.3.1",
+    "uglify-js": "^2.7.3"
+  }
+}
