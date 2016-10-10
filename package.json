@@ -1,11 +1,11 @@
 {
   "name": "toogles-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NodeJS/Browser client for fetching feature flags from the toogles api",
   "browser": "src/browser.js",
   "main": "src/node.js",
-  "engines" : {
-    "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
   "scripts": {
     "build-browser-dist": "browserify src/browser.js | uglifyjs --stats > dist/toogles-browser.js",
