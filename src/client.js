@@ -1,5 +1,3 @@
-var objectAssign = require('object-assign');
-
 module.exports = function(fetch) {
     var defaultHeaders = {
         'Accept': 'application/json'
@@ -12,7 +10,7 @@ module.exports = function(fetch) {
 
         this.apiUrl = apiUrl;
         this.config = config || {};
-        this.headers = objectAssign(defaultHeaders, this.config.headers);
+        this.headers = Object.assign(defaultHeaders, this.config.headers);
         this.features = null;
     }
 

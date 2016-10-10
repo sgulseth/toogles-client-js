@@ -4,6 +4,9 @@
   "description": "NodeJS/Browser client for fetching feature flags from the toogles api",
   "browser": "src/browser.js",
   "main": "src/node.js",
+  "engines" : {
+    "node" : ">=4.0.0"
+  },
   "scripts": {
     "build-browser-dist": "browserify src/browser.js | uglifyjs --stats > dist/toogles-browser.js",
     "test": "nyc ava --verbose"
@@ -16,8 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "es6-promise": "^4.0.5",
-    "isomorphic-fetch": "^2.2.1",
-    "object-assign": "^4.1.0"
+    "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
     "ava": "^0.16.0",
